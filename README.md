@@ -2,15 +2,25 @@
 
 This is a basic project using the endpoints of torre to get some information about your network. The major part done was on backend, where using a Graph database system could be able to do some analytics like facebook or other social networks. A big oportunity for that is to navigate over users and find real interesting patterns on user connections.
 
+#   Extra Notes:
+
+I had to change the repositories in order to deploy easily using Heroku.
+The application is available on: https://torre.mateocontreras.co/
+The repositories will be available:
+
+[ Back ] - https://github.com/jmcontreras10/my-torre-front
+[ Front ] - https://github.com/jmcontreras10/my-torre-front
+
+
 # Requirements
 
 To run this front you'll need a .end file with:
 
-MONGO_USER - Mongo instance User
-MONGO_PASSWORD - Mongo instance password
-MONGO_URL - Mongo instance url (just the path)
-MONGO_DATABASE  - Mongo instance database
-JWT_KEY - A secret key for the Auth encriptation
+MONGO_USER - Mongo instance User<br/>
+MONGO_PASSWORD - Mongo instance password<br/>
+MONGO_URL - Mongo instance url (just the path)<br/>
+MONGO_DATABASE  - Mongo instance database<br/>
+JWT_KEY - A secret key for the Auth encriptation<br/>
 
 
 # Progress Log

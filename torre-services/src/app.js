@@ -25,11 +25,11 @@ app.use("/api/auth", authRoutes);
 app.use("/api/organizations", organizationsRoutes);
 app.use("/api/social", socialRoutes);
 
-app.use(express.static(path.join(__dirname, "../../Front")));
+app.use(express.static(path.join(__dirname, "../Front")));
 
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(path.join(__dirname, "../../Front"), "index.html"));
+  res.sendFile(path.join(path.join(__dirname, "../Front"), "index.html"));
 });
 
 module.exports = app;
