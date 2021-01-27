@@ -1,0 +1,50 @@
+.basicInput {
+  border-radius: 2px;
+  padding: 9px 16px;
+  background-color: #414346;
+  margin-bottom: 5%;
+  text-align: center;
+  &:disabled {
+    background-color: #27292d00;
+    color: #64676b;
+    border: 2px solid #414346;
+    cursor: default;
+  }
+}
+
+.continueButton {
+  border-radius: 2px;
+  padding: 9px 16px;
+  background-color: #cddc39;
+  color: #27292d;
+  &:disabled {
+    background-color: #27292d00;
+    color: #64676b;
+    border: 2px solid #414346;
+    cursor: default;
+  }
+}
+
+.AuthCard {
+  @media only screen and (max-width: 768px) {
+    /* For mobile: */
+    width: 80vw;
+  }
+
+  @media only screen and (min-width: 980px) {
+    /* For tablets: */
+    width: 40vw;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    /* For desktop: */
+    width: 30vw;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    /* For desktop: */
+    width: 20vw;
+  }
+  border-radius: 2px;
+  box-shadow: 0px 4px 10px black;
+}

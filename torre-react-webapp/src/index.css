@@ -1,0 +1,26 @@
+:root {
+  --primary: #cddc39;
+  --secondary: #27292d;
+  --terceary: #E6D8CA;
+  --onPrimary: #434045;
+  --onSecondary: #D9D4CA;
+  --onTerceary: #414346;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+input:focus,
+textarea:focus,
+select:focus,
+button {
+  outline: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

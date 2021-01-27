@@ -1,0 +1,34 @@
+//  Constraints
+
+CREATE CONSTRAINT ON (p:Person) ASSERT p.username IS UNIQUE
+CREATE CONSTRAINT ON (o:Organization) ASSERT o.name IS UNIQUE
+DROP CONSTRAINT ON (p:Person) ASSERT p.username IS UNIQUE
+
+MATCH (n) DETACH DELETE n
+
+//  Create a single node
+
+CREATE (p:Person {username:'USERNAME',name:'NAME',picture:'PICTURE'}) RETURN p
+
+//  Create a bidirectional relationship
+(nope :p)
+MATCH (p1:Person {username:"USERNAME1"})
+MATCH (p2:Person {username:"USERNAME2"})
+CREATE (p1) - [re1:closeTo] -> (p2)
+CREATE (p2) - [re2:closeTo] -> (p1)
+RETURN re1, re2
+
+MATCH (p1:Person {username:"USERNAME1"}), 
+(p2:Person {username: "USERNAME2"}) 
+MERGE (p1)-[rel:close]-(p2) 
+RETURN rel
+
+
+//  Get Adjasents
+MATCH (p1:Person { username: 'USERNAME' })--(p2:Person)
+RETURN p2
+
+
+//  Get Adjasents after second layer
+MATCH (p1:Person { username: 'USERNAME' })--(p2:Person)
+RETURN distinct p1, p2
